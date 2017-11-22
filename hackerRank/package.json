@@ -4,7 +4,7 @@
   "description": "[**Day 23: BST Level-Order Traversal**](https://github.com/mrholeechit/tech-challenges/blob/master/hackerRank/day23Challenge.md)",
   "main": "index.js",
   "scripts": {
-    "test": "jest --watch"
+    "test": "jest --watchAll"
   },
   "author": "",
   "license": "ISC",
