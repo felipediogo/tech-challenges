@@ -1,0 +1,14 @@
+{
+  "name": "hacker-rank-challenges",
+  "version": "1.0.0",
+  "description": "[**Day 23: BST Level-Order Traversal**](https://github.com/mrholeechit/tech-challenges/blob/master/hackerRank/day23Challenge.md)",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --watch"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^21.2.1"
+  }
+}
