@@ -3,7 +3,7 @@ const createStep = (count) =>
 const createPad = (count) =>
   Array.apply(null, Array(count)).map(function() { return ' ' }).join('');
 
-const process = (length) => {
+const createStair = (length) => {
   let stair = '';
   const pad = createPad(length);
 
@@ -14,4 +14,4 @@ const process = (length) => {
   return stair.substring(0, stair.length-1);
 };
 
-module.exports = process;
+module.exports = createStair;
