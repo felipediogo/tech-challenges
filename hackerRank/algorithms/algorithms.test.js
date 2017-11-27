@@ -3,6 +3,9 @@ const calculatePoints = require('./compareTheTriplets');
 const calculateDiagonals = require('./diagonalDifference');
 const plusMinus = require('./plusMinus');
 const createStair = require('./staircase');
+const minMaxSum = require('./minMaxSum');
+const tallestCandle = require('./tallestCandles');
+const readFile = require('../utils/readFile');
 
 describe('Simple Array Sum', () => {
   test('Test if an array [1,2,3,4,5] returns the sum of all numbers', () => {
@@ -35,5 +38,48 @@ describe('Staircase', () => {
   });
   test('a stair of 5 steps', () => {
     expect(createStair(5)).toEqual('    #\n   ##\n  ###\n ####\n#####');
+  });
+});
+
+describe('Min max is  sum the 4 lowest numbers and the 4 highest numbers', () => {
+  test('The array [1, 2, 3, 4, 5] should return 10', () => {
+    expect(minMaxSum([1, 2, 3, 5, 4])).toEqual(`10 14`);
+  });
+  test('The array [12, 3, 7, 9, 150] should return 10', () => {
+    expect(minMaxSum([12, 3, 7, 9, 150])).toEqual(`31 178`);
+  });
+});
+
+describe('Get the quantity of the highest number in an array', () => {
+  test('how many of the highest numbers in an array repeats', () => {
+    expect(tallestCandle(4, [3, 2, 3, 1])).toEqual(2);
+  });
+  test('4 equals candles', () => {
+    expect(tallestCandle(4, [3, 3, 3, 3])).toEqual(4);
+  });
+  test('zero candles', () => {
+    expect(tallestCandle(0, [])).toEqual(0);
+  });
+  test('only one candle', () => {
+    expect(tallestCandle(1, [0])).toEqual(1);
+  });
+  test('three numbers 8', () => {
+    expect(tallestCandle(7, [2, 3, 5, 1, 3, 6, 1, 3, 6, 8, 2, 3, 6, 3, 2, 7, 8, 3, 6, 2, 8])).toEqual(3);
+  });
+  test('Testing max array size', (done) => {
+    readFile('../hackerRank/algorithms/fixtures/input06.txt')
+      .then((data) => {
+        const [N, values] = data.split('\n');
+        expect(tallestCandle(N, values.split(' '))).toEqual(parseInt(N));
+        done();
+      });
+  });
+  test('Testing big array size and numbers', (done) => {
+    readFile('../hackerRank/algorithms/fixtures/input05.txt')
+      .then((data) => {
+        const [N, values] = data.split('\n');
+        expect(tallestCandle(N, values.split(' '))).toEqual(12443);
+        done();
+      });
   });
 });
