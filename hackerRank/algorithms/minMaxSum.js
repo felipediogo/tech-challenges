@@ -1,4 +1,4 @@
-const quickSort = require('./sorts/quickSort');
+const { quickSort } = require('./sorts/quickSort');
 const arraySum = require('./arraySum');
 const minMaxSum = (arr, sampleSize = 4) => {
     let length = arr.length - 1;

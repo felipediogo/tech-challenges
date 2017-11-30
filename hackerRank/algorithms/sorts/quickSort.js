@@ -18,7 +18,7 @@ function partition(arr, pivot, left, right) {
   return partitionIndex;
 }
 
-module.exports = function quickSort({ arr, left, right }) {
+const quickSort = ({ arr, left, right }) => {
   var len = arr.length,
     pivot,
     partitionIndex;
@@ -34,4 +34,13 @@ module.exports = function quickSort({ arr, left, right }) {
     quickSort({ arr, left: partitionIndex + 1, right });
   }
   return arr;
+};
+
+const sort = (arr) => {
+  return quickSort({ arr, left: 0, right: (arr.length - 1) });
 }
+
+module.exports = {
+  quickSort,
+  sort
+};

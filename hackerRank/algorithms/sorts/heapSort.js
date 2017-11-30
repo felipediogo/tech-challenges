@@ -33,14 +33,16 @@ function swap(input, index_A, index_B) {
     input[index_B] = temp;
 }
 
-function heapSort(input) {
+const sort = (input) => {
     buildHeap(input);
-
     for (var i = input.length - 1; i > 0; i--) {
         swap(input, 0, i);
         arrayLength--;
         heapify(input, 0);
     }
-}
+    return input;
+};
 
-module.exports = heapSort;
+module.exports = {
+    sort
+};
