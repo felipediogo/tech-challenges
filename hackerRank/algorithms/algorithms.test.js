@@ -93,3 +93,19 @@ describe('Grading Students', () => {
     expect(gradingStudents([47, 48, 46, 49])).toEqual([47, 50, 46, 50]);
   });
 });
+
+describe('Apples and Oranges', () => {
+  const processFruit = require('./applesAndOranges');
+  test('Sample test case from hackerrank', () => {
+    expect(
+      processFruit({
+        startHouse: 7,
+        endHouse: 11,
+        appleTree: 5,
+        apples: [-2, 2, 1, 3, 6, 7, 9, 11, 12],
+        orangeTree: 15,
+        oranges: [5, -6]
+      })
+    ).toEqual({ apples: 3, oranges: 1 });
+  });
+});
