@@ -83,3 +83,13 @@ describe('Get the quantity of the highest number in an array', () => {
       });
   });
 });
+
+describe('Grading Students', () => {
+  const gradingStudents = require('./gradingStudents');
+  test('Sample test case from hackerrank', () => {
+    expect(gradingStudents([73, 67, 38, 33])).toEqual([75, 67, 40, 33]);
+  });
+  test('if it converts multiples correctly', () => {
+    expect(gradingStudents([47, 48, 46, 49])).toEqual([47, 50, 46, 50]);
+  });
+});
