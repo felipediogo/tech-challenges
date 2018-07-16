@@ -1,3 +1,32 @@
-get highest distinct values of a tree path
-get biggest prefix and sufix equals of a string
+challenges:
+* get highest distinct values of a tree path
+* get biggest prefix and sufix equals of a string
+
+
+
+
+questions:
+* How do you detect whether or not a word is a palindrome?
+I would remove all spaces and write it backwards.
+* Describe what happens in your browser as soon as you hit enter after writing a URL in the address bar.
+* What is the most difficult situation you have ever faced in your life? How did you handle it?
+* How would you tell a customer what Wi-Fi is?
+* Which Amazon leadership principle do you resonate most with?
+
+The thing I like the most about Amazon? Prime Air
+
+ -> Amazon is guided by four principles: 
+ * customer obsession rather than competitor focus
+ * passion for invention
+ * commitment to operational excellence
+ * and long-term thinking
+
+
+* Contar uma historia de um problema em produção que era por causa de um load balancer com configuração errada.
+
+* Na TOTVS contar em como eu como desenvolvedor comecei a ajudar outros devs a adquirir a mesma logica que eu tinha.
+
+" Experienced software engineers know that the best engineers often remove code when solving problems rather 
+than adding code. Removal is always a better option, when it comes to code, systems, and processes. 
+Simplicity allows for faster and cheaper innovation, and that's why they're married together in this principle."
 
